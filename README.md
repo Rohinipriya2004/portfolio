@@ -52,7 +52,7 @@ You can also view the live portfolio here: [Portfolio Live](https://rohinipriya2
 
 ## 🔗 Social Links
 - [GitHub](https://github.com/rohinipriya2004)  
-- [LeetCode](https://leetcode.com/yourusername)  
+- [LeetCode](https://leetcode.com/Rohini Priya/)  
 
 ---
 
