@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohini Priya | Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg, #fef9f0, #f0f7f7, #f0f0f0);
+color:#1f2937;
+overflow-x:hidden;
+position:relative;
+}
+html{
+scroll-behavior:smooth;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid #e2e8f0;
+}
+
+section{
+padding:120px 8%;
+min-height:100vh;
+scroll-margin-top:80px;
+}
+
+.logo{
+color:#7b68ee;
+font-weight:600;
+font-size:22px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#475569;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#7b68ee;
+}
+
+section{
+padding:120px 8%;
+min-height:100vh;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:relative;
+}
+
+.hero-text{
+max-width:600px;
+z-index:2;
+position:relative;
+}
+
+.hero-text h4{
+color:#7b68ee;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero-text h2{
+color:#475569;
+margin-bottom:15px;
+}
+
+.hero-text p{
+color:#475569;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+border-radius:25px;
+text-decoration:none;
+margin-top:20px;
+margin-right:10px;
+transition:.3s;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+background:linear-gradient(135deg,#c3bef0,#d0f0f6);
+color:#334155;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 20px #7b68ee;
+}
+
+.social a{
+display:inline-block;
+padding:12px;
+border-radius:50%;
+margin-top:20px;
+margin-right:10px;
+transition:.3s;
+background:linear-gradient(135deg,#c3bef0,#d0f0f6);
+color:#475569;
+}
+
+.social a:hover{
+transform:translateY(-5px);
+color:#7b68ee;
+}
+
+.hero-image img{
+width:300px;
+border-radius:50%;
+box-shadow:0 0 40px rgba(123,104,238,0.5);
+transition:.5s;
+}
+
+.hero-image img:hover{
+transform:scale(1.05);
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+color:#7b68ee;
+}
+
+.skills-container{
+display:flex;
+gap:40px;
+justify-content:space-between;
+margin-top:40px;
+}
+
+.skills-left,.skills-right{
+flex:1;
+}
+
+.skill-bar{
+margin-bottom:15px;
+}
+
+.skill-name{
+margin-bottom:5px;
+color:#475569;
+}
+
+.skill-progress{
+width:80%;
+height:20px;
+background:#e2e8f0;
+border-radius:10px;
+overflow:hidden;
+}
+
+.skill-progress div{
+height:100%;
+text-align:right;
+padding-right:5px;
+color:#fff;
+line-height:20px;
+border-radius:10px;
+}
+
+.tech-html{width:100%;background:#d59c81;}
+.tech-css{width:80%;background:#a6a0f5;}
+.tech-js{width:75%;background:#fddc5c;}
+.tech-mysql{width:70%;background:#34d3e8;}
+.tech-python{width:60%;background:#34d399;}
+.tech-java{width:65%;background:#f49bb6;}
+
+.soft-skill{
+background:#ffffff;
+padding:15px;
+border-radius:10px;
+border:1px solid #e2e8f0;
+text-align:center;
+margin-bottom:15px;
+transition:.5s;
+}
+
+.soft-skill:hover{
+transform:translateY(-5px);
+border-color:#7b68ee;
+}
+
+/* PROJECT SECTION */
+
+#projects{
+padding:120px 8%;
+}
+
+.project-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+min-height:100vh;
+}
+
+.project-left{
+flex:1;
+}
+
+.project-left h4{
+color:#7b68ee;
+margin-bottom:10px;
+}
+
+.project-left h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.project-left p{
+color:#475569;
+margin-bottom:15px;
+}
+
+.project-left ul{
+margin-bottom:20px;
+padding-left:20px;
+}
+
+.project-left ul li{
+margin-bottom:5px;
+color:#475569;
+}
+
+.project-right{
+flex:1;
+}
+
+.project-right img {
+    width: 100%;
+    max-width: 500px; /* limit max width */
+    height: auto;     /* maintain aspect ratio */
+    object-fit: cover; /* crop if needed without stretching */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+.project-right img:hover{
+transform:scale(1.05);
+}
+.project-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+.project-left, .project-right {
+    flex: 1 1 450px; /* minimum width to prevent shrinking too much */
+}
+
+.reverse{
+flex-direction:row-reverse;
+}
+
+/* CONTACT */
+.contact{
+padding:100px 10%;
+background:#f9fafb;
+}
+
+.contact-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+.contact-left{
+flex:1;
+}
+
+.contact-left h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact-left p{
+color:#6b7280;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.contact-info p{
+margin-bottom:10px;
+}
+
+.contact-right{
+flex:1;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.input-group{
+position:relative;
+}
+
+.input-group input,
+.input-group textarea{
+width:100%;
+padding:15px;
+border:1px solid #e5e7eb;
+border-radius:8px;
+font-size:16px;
+outline:none;
+background:transparent;
+}
+
+.input-group textarea{
+min-height:150px;
+resize:none;
+}
+
+.input-group label{
+position:absolute;
+left:15px;
+top:15px;
+color:#9ca3af;
+background:#f9fafb;
+padding:0 5px;
+transition:0.3s;
+pointer-events:none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label{
+top:-10px;
+font-size:12px;
+color:#7b68ee;
+}
+
+.send-btn{
+padding:15px;
+background:#7b68ee;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.send-btn:hover{
+background:#6a5acd;
+transform:translateY(-2px);
+}
+
+
+/* ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* PARTICLES */
+
+.particles{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:1;
+}
+
+.particle{
+position:absolute;
+width:6px;
+height:6px;
+background:#7b68ee;
+border-radius:50%;
+opacity:0.7;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-500px);}
+100%{transform:translateY(0);}
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.skills-container{
+flex-direction:column;
+}
+
+.project-row{
+flex-direction:column;
+}
+
+.reverse{
+flex-direction:column;
+}
+
+}
+
+nav a.active{
+color:#7b68ee;
+font-weight:600;
+}
+
+@media(max-width:768px){
+
+.contact-container{
+flex-direction:column;
+}
+
+.contact-left h2{
+font-size:30px;
+}
+
+}
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  fill: #475569; /* Default color */
+}
+
+.social-link:hover .social-icon {
+  fill: #7b68ee; /* Hover color */
+}
+
+/* HIGHLIGHTS SECTION */
+
+.highlights{
+padding:20px 8% 40px 8%;
+margin-top:-40px;
+margin-bottom:-40px;
+}
+
+.highlight-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.highlight-box{
+background:#ffffff;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:280px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.highlight-box:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 35px rgba(123,104,238,0.2);
+}
+
+.highlight-box i{
+font-size:30px;
+color:#7b68ee;
+margin-bottom:15px;
+}
+
+.highlight-box h3{
+margin-bottom:10px;
+color:#1f2937;
+}
+
+.highlight-box p{
+color:#64748b;
+font-size:14px;
+}
+
+/* animation glow */
+
+.highlight-box::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,#7b68ee,transparent);
+top:-100%;
+left:-100%;
+transition:0.6s;
+opacity:0.2;
+}
+
+.highlight-box:hover::before{
+top:100%;
+left:100%;
+}
+
+#skills{
+padding-top:60px;
+}
+
+</style>
+</head>
+<body>
+<div class="particles" id="particles"></div>
+
+<header>
+<div class="logo"><a href="#" style="text-decoration:none;color:#7b68ee;"><i class="fas fa-home"></i> Rohini Priya</a></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero fade" id="home">
+<div class="hero-text">
+<h4>Welcome to My Portfolio</h4>
+<h1>Rohini Priya</h1>
+<h2 class="typing"></h2>
+<p>
+I am a passionate Frontend Developer with strong interest in 
+building responsive and user-friendly web applications. 
+I enjoy learning new technologies and solving real-world problems 
+through clean and efficient code.
+</p>
+</div>
+<div style="display:flex;align-items:center;gap:15px;margin-top:20px;">
+  <a href="resume.html" class="btn" download>Resume</a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/Rohinipriya2004" target="_blank" class="social-link">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="social-icon">
+  </a>
+
+  <!-- LeetCode -->
+  <a href="https://leetcode.com/u/rohinipriya273/" target="_blank" class="social-link">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg" alt="LeetCode" class="social-icon">
+  </a>
+</div>
+<div class="hero-image">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWx6Nno3ZmljdGJ6ampqMmJlZHE5eTBrejVsYjc0a3BrdWI2YnI1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0irIDXCtXpsHlgGq2p/giphy.gif" 
+       alt="Animated Hero Image"/>
+</div>
+</section>
+<section class="highlights fade">
+  <div class="highlight-container">
+
+    <div class="highlight-box">
+      <i class="fas fa-code"></i>
+      <h3>Built Multiple Projects</h3>
+      <p>Developed real-world web applications with modern UI</p>
+    </div>
+
+    <div class="highlight-box">
+      <i class="fas fa-brain"></i>
+      <h3>110+ LeetCode Solved</h3>
+      <p>Strong problem-solving and algorithmic thinking</p>
+    </div>
+
+    <div class="highlight-box">
+      <i class="fas fa-palette"></i>
+      <h3>Creative UI Designer</h3>
+      <p>Focused on clean and responsive design</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills" class="fade">
+<h2 class="section-title">Skills</h2>
+<div class="skills-container">
+<div class="skills-left">
+<h3>Technical Skills</h3>
+<div class="skill-bar"><div class="skill-name">HTML</div><div class="skill-progress"><div class="tech-html" data-width="100%">100%</div></div></div>
+<div class="skill-bar"><div class="skill-name">CSS</div><div class="skill-progress"><div class="tech-css" data-width="80%">80%</div></div></div>
+<div class="skill-bar"><div class="skill-name">JavaScript</div><div class="skill-progress"><div class="tech-js" data-width="65%">65%</div></div></div>
+<div class="skill-bar"><div class="skill-name">MySQL</div><div class="skill-progress"><div class="tech-mysql" data-width="70%">70%</div></div></div>
+<div class="skill-bar"><div class="skill-name">Python</div><div class="skill-progress"><div class="tech-python" data-width="60%">60%</div></div></div>
+<div class="skill-bar"><div class="skill-name">Java</div><div class="skill-progress"><div class="tech-java" data-width="75%">75%</div></div></div>
+</div>
+<div class="skills-right">
+<h3>Soft Skills</h3>
+<div class="soft-skill">Communication</div>
+<div class="soft-skill">Teamwork</div>
+<div class="soft-skill">Problem Solving</div>
+<div class="soft-skill">Time Management</div>
+<div class="soft-skill">Adaptability</div>
+</div>
+</div>
+</section>
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project-row fade">
+
+<div class="project-left">
+  <h4>Project 01</h4>
+  <h2>To-Do List Application</h2>
+  <p>
+    A web-based To-Do List Application to help users manage daily tasks efficiently. 
+    Users can add, edit, delete, and mark tasks as complete, ensuring better productivity and organization.
+  </p>
+
+  <ul>
+    <li>Add and manage tasks easily</li>
+    <li>Mark tasks as complete/incomplete</li>
+    <li>Edit or delete tasks</li>
+    <li>Responsive design for mobile and desktop</li>
+    <li>Local storage to save tasks</li>
+  </ul>
+
+  <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, LocalStorage</p>
+</div>
+
+<div class="project-right">
+<img src="C:\Users\ADMIN\Pictures\Screenshots\todolist.png" alt="To-Do List Application">
+</div>
+
+</div>
+
+<div class="project-row fade reverse">
+  <div class="project-left">
+    <h4>Project 02</h4>
+    <h2>Library Management System</h2>
+    <p>A complete library management solution to manage books, students, issuing and return records.</p>
+    <ul>
+      <li>Book management</li>
+      <li>Student records</li>
+      <li>Issue & return system</li>
+    </ul>
+    <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, MySQL, PHP</p>
+  </div>
+  <div class="project-right">
+    <img src="C:\Users\ADMIN\Pictures\Screenshots\Libiary.png" alt="Library Management System">
+  </div>
+</div>
+
+<div class="project-row fade">
+
+  <div class="project-left">
+  <h4>Project 03</h4>
+  <h2>Student Report System</h2>
+  <p>
+    A comprehensive Student Management System designed to help schools and colleges manage student records efficiently. 
+    It streamlines attendance, grades, assignments, and personal information, making administrative tasks easier and faster.
+  </p>
+
+  <ul>
+    <li>Manage student personal details and profiles</li>
+    <li>Track attendance with automatic report generation</li>
+    <li>Maintain grades, marks, and exam records</li>
+    <li>Handle assignments and submissions</li>
+    <li>Search and filter students efficiently</li>
+    <li>Generate printable reports and analytics</li>
+  </ul>
+
+  <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, MySQL, PHP</p>
+</div>
+  <div class="project-right">
+    <img src="C:\Users\ADMIN\Pictures\Screenshots\student.png" alt="Student Management System">
+  </div>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+<div class="contact-container">
+
+<div class="contact-left" style="width:100%;text-align:center;">
+<h2>Contact Me</h2>
+
+<p>
+I'm always open to discussing new opportunities, collaborations, 
+or freelance projects. Feel free to reach out anytime.
+</p>
+
+<div class="contact-info" style="margin-top:30px;">
+
+<p>
+<i class="fas fa-envelope" style="color:#7b68ee;"></i> 
+<strong>Email:</strong> rohinipriya273@gmail.com
+</p>
+
+<p>
+<i class="fas fa-phone" style="color:#7b68ee;"></i> 
+<strong>Phone:</strong> +91 9597602157
+</p>
+
+<p>
+<i class="fas fa-location-dot" style="color:#7b68ee;"></i> 
+<strong>Location:</strong> Tamil Nadu, India
+</p>
+
+<p>
+<i class="fas fa-briefcase" style="color:#7b68ee;"></i> 
+<strong>Availability:</strong> Open for Internship / Full-Time Opportunities
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer style="text-align:center;padding:30px;color:#64748b;border-top:1px solid #e2e8f0;background:#ffffff">
+<p>© 2026 Rohini Priya</p>
+<p>Email: rohinipriya273@gmail.com </p>
+</footer>
+
+<script>
+// Typing animation
+const texts = ["Web Developer"];
+let ti = 0, tj = 0, isDeleting = false;
+function typing() {
+    const element = document.querySelector(".typing");
+    const currentText = texts[ti];
+    if (!isDeleting) {
+        element.textContent = currentText.slice(0, tj++);
+        if (tj > currentText.length) { isDeleting = true; setTimeout(typing,1000); return; }
+    } else {
+        element.textContent = currentText.slice(0, tj--);
+        if (tj < 0) { isDeleting = false; ti = (ti + 1) % texts.length; }
+    }
+    setTimeout(typing, 150);
+}
+typing();
+
+// Fade-in observer
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("show"); } });
+});
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+
+// Particles
+const particlesContainer = document.getElementById('particles');
+for(let k=0;k<50;k++){
+    let particle=document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left=Math.random()*100+'%';
+    particle.style.top=Math.random()*100+'%';
+    particle.style.width=(3+Math.random()*4)+'px';
+    particle.style.height=(3+Math.random()*4)+'px';
+    particle.style.animationDuration=(5+Math.random()*5)+'s';
+    particle.style.background='hsl('+Math.random()*360+',70%,80%)';
+    particlesContainer.appendChild(particle);
+}
+
+// Skill bars
+const skillBars = document.querySelectorAll(".skill-progress div");
+window.addEventListener("scroll", () => {
+    skillBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if(rect.top < window.innerHeight) { bar.style.width = bar.getAttribute("data-width"); }
+    });
+});
+
+
+// Scroll active menu highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+let current = "";
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 150;
+const sectionHeight = section.clientHeight;
+
+if (pageYOffset >= sectionTop) {
+current = section.getAttribute("id");
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove("active");
+if (link.getAttribute("href") === "#" + current) {
+link.classList.add("active");
+}
+});
+});
+</script>
+</body>
+</html>

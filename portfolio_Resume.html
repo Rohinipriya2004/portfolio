@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Rohini Priya</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f9fafb;
+color:#111827;
+}
+
+/* Container */
+
+.resume{
+max-width:1100px;
+margin:60px auto;
+padding:20px;
+}
+
+/* Header */
+
+.header{
+margin-bottom:60px;
+}
+
+.header h1{
+font-size:40px;
+margin-bottom:5px;
+}
+
+.header p{
+color:#6b7280;
+}
+
+/* Timeline */
+
+.timeline{
+position:relative;
+margin-top:60px;
+}
+
+.timeline::before{
+content:'';
+position:absolute;
+left:50%;
+top:0;
+width:3px;
+height:100%;
+background:linear-gradient(to bottom,#7b68ee,#c3b8e3);
+transform:translateX(-50%);
+}
+
+.timeline-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:70px;
+opacity:0;
+transform:translateY(50px);
+transition:0.8s;
+}
+
+.timeline-item.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.timeline-content{
+background:white;
+padding:25px;
+width:45%;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.timeline-content:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.timeline-left{
+text-align:right;
+}
+
+.timeline-content h3{
+color:#7b68ee;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.timeline-content p{
+color:#6b7280;
+line-height:1.6;
+font-size:14px;
+margin-bottom:6px;
+}
+
+.timeline-dot{
+width:18px;
+height:18px;
+background:#7b68ee;
+border-radius:50%;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+box-shadow:0 0 10px rgba(123,104,238,0.6);
+}
+
+/* Button */
+
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:12px 25px;
+background:#7b68ee;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#6a5acd;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.timeline::before{
+left:20px;
+}
+
+.timeline-item{
+flex-direction:column;
+margin-left:40px;
+}
+
+.timeline-content{
+width:100%;
+text-align:left;
+}
+
+.timeline-left{
+text-align:left;
+}
+
+.timeline-dot{
+left:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="resume">
+
+<div class="header">
+<h1>Rohini Priya</h1>
+</div>
+
+<div class="timeline">
+
+<!-- Education -->
+
+<div class="timeline-item">
+<div class="timeline-content timeline-left">
+<h3>Education</h3>
+<p>B.E Computer Science and Engineering</p>
+<p>Hindusthan Institute of Technology</p>
+<p>2022 – 2026 | CGPA: 8.7</p>
+<p>Focused on software development, problem-solving and core computer science concepts.</p>
+</div>
+<div class="timeline-dot"></div>
+<div></div>
+</div>
+
+<!-- Internship -->
+
+<div class="timeline-item">
+<div></div>
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Internship</h3>
+<p>Web Development Intern</p>
+<p>Emglitz Technologies | July 2024</p>
+<p>Gained hands-on experience in building responsive websites and improving UI/UX design.</p>
+</div>
+</div>
+
+<!-- Training -->
+
+<div class="timeline-item">
+<div class="timeline-content timeline-left">
+<h3>Training</h3>
+<p>Java Training – Igenuine</p>
+<p>March 2025 – April 2025</p>
+<p>Strengthened Java, OOP and DSA concepts and built a Library Management System.</p>
+</div>
+<div class="timeline-dot"></div>
+<div></div>
+</div>
+
+<!-- Academic Highlights -->
+
+<div class="timeline-item">
+<div></div>
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Academic Highlights</h3>
+<p>CRYPTERA 2024 – Technical Paper Presentation</p>
+<p>ADDICT 2K25 – Project Expo & Coding</p>
+<p>Autogenix Workshop – Automation Technologies</p>
+<p>Eye for AI Bootcamp – ADAS Video Labelling</p>
+</div>
+</div>
+
+</div>
+
+<a href="C:\Users\ADMIN\portfilo.html" class="btn">Back to Portfolio</a>
+
+</div>
+
+<script>
+
+const timelineItems = document.querySelectorAll(".timeline-item");
+
+window.addEventListener("scroll", () => {
+
+timelineItems.forEach(item => {
+
+const itemTop = item.getBoundingClientRect().top;
+
+if(itemTop < window.innerHeight - 100){
+item.classList.add("show");
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
